@@ -152,4 +152,23 @@ export class GetDataService {
       img: '../../assets/dollar.png',
     },
   ]
+
+  blogData = [
+    {
+      id: 1,
+      date: 'Oct 10th, 2024',
+      img: '../../assets/m1.png',
+    },
+    {
+      id: 2,
+      date: 'Oct 10th, 2024',
+      img: '../../assets/m2.png',
+    },
+    {
+      id: 3,
+      date: 'Oct 10th, 2024',
+      img: '../../assets/m3.png',
+    },
+    
+  ]
 }

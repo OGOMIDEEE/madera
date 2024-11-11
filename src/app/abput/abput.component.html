@@ -2,11 +2,96 @@
 <div class="">
 
 
-    <div class="banner" data-aos="fade-up" data-aos-easing="ease-in-out">
-        <div class="content" >
-            <h1 class="mb-3" style="font-weight: bold;" data-aos="fade-up" data-aos-easing="ease-in-out">All FOR YOUR HOME</h1>
-           
-        </div>
-        
+  <div class="banner" data-aos="fade-up" data-aos-easing="ease-in-out">
+    <div class="content">
+      <h1 class="mb-3" style="font-weight: bold;" data-aos="fade-up" data-aos-easing="ease-in-out">All FOR YOUR HOME
+      </h1>
+
     </div>
-</div>
+  </div>
+
+  <div class="container mt-5 mb-3">
+    <div class="row ">
+      <div class="col-lg-3 product" *ngFor="let data of getaboutData; index as i" data-aos="zoom-in"
+        data-aos-easing="ease-in-out">
+        <a class="productLink">
+          <div class="" *ngIf="i<=3">
+            <div class="abt-contain">
+              <img src={{data.img}} alt="">
+              <h4 class="menutext">{{data.name}}</h4>
+            </div>
+            <p class="smalltext" style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quasi, cum sunt dolorem quisquam ullam voluptatem cumque at. Ducimus, ullam blanditiis.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="video-container mt-5">
+      <video #backgroundVideo autoplay muted loop>
+        <source src="../../assets/1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="video-buttons">
+        <button *ngIf="!isPlaying" (click)="playVideo()" class="btn btn-light"><i class="bi bi-play-fill"></i></button>
+        <button *ngIf="isPlaying" (click)="pauseVideo()" class="btn btn-light"><i class="bi bi-pause-fill"></i></button>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-6 col-12 mt-5 joltImg " style="text-align: start;" data-aos="zoom-in"
+        data-aos-easing="ease-in-out">
+        <p class="bigtext">Functionality <br>meets perfection</p>
+        <p class="smalltext" style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+          cum sunt dolorem quisquam ullam voluptatem cumque at. Ducimus, ullam blanditiis.Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Quasi, cum sunt dolorem quisquam ullam voluptatem cumque at. Ducimus, ullam
+          blanditiis.</p>
+      </div>
+
+      <div class="col-lg-6 col-12 mt-5 joltImg" data-aos="zoom-in" data-aos-easing="ease-in-out">
+        <div class="mb-5">
+          <h4 class="menutext">Creativity</h4>
+          <div class="progress" style="height: 7px;">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+              aria-valuemax="100">
+            </div>
+          </div>
+        </div>
+        <div class="mb-5">
+          <h4 class="menutext">Advertising</h4>
+          <div class="progress" style="height: 7px;">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0"
+              aria-valuemax="100">
+            </div>
+          </div>
+        </div>
+        <div class="mb-5">
+          <h4 class="menutext">Design</h4>
+          <div class="progress" style="height: 7px;">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0"
+              aria-valuemax="100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <h4 class="menutext" style="font-size: 1.5rem;">last blog post</h4>  
+      <div class="col-lg-4 mt-3 product" *ngFor="let data of getblogData; index as i" data-aos="zoom-in" data-aos-easing="ease-in-out">
+          <a class="productLink">
+            <div class="product-grid" style="align-items: center; justify-content: center; display: flex; flex-direction: column;" *ngIf="i<=3">
+              <div>
+                <img src={{data.img}} alt="">
+              </div>
+              <p class="smalltext" style="font-size: 14px;margin-top: 10px;">{{data.date}}</p> 
+              <h4 class="menutext" style="text-align: center;">Paint your office in natural <br>colors only</h4> 
+              <h4 class="menutext" style="text-align: center; text-decoration: underline; font-size: 14px;">Read more</h4> 
+              
+            </div>
+          </a>
+  </div>
+  </div>
